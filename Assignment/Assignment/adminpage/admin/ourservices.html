@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+*{
+    font-family: 'Poppins' , sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+.container{
+    /* background: linear-gradient(45deg, blueviolet, lightgreen); */
+    padding: 15px 9%;
+    padding-bottom: 100px;
+}
+
+.container .heading{
+    text-align: center;
+    padding-bottom: 15px;
+    color: #fff;
+    text-shadow: 0 5px 10px rgba(0,0,0.2);
+    font-size: 50px;
+}
+
+.container .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px , 1fr));
+}
+
+.container .box-container .box{
+    box-shadow: 0 5px 10px rgba(0,0,0.2);
+    border-radius: 100px;
+    background: #fff;
+    text-align: center;
+    padding: 30px 60px;
+}
+
+.container .box-container .box img{
+    height: 80px;
+}
+
+.container .box-container .box h3{
+    color: #444;
+    font-size: 22px;
+    padding: 10px 0;
+}
+
+.container .box-container .box p{
+    color: #777;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.container .box-container .box:hover{
+    box-shadow: 0 10px 15px rgba(0,0,0.3);
+    transform: scale(1.03);
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Our Services</h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="../img/real-estate-consulting-expert-advice-for-smart-property-decisions-in-morristown-nj.jpg">
+                <h3>Expert Consultation</h3>
+                <p>"Explore our extensive database of residential and commercial properties. Our user-friendly platform allows you to search for your dream home or ideal business space effortlessly."</p>
+            </div>
+            <div class="box">
+                <img src="../img/comparative-market-analysis.webp">
+                <h3>Market Analysis</h3>
+                <p>"Stay ahead of the real estate market with our comprehensive market analysis. Access trends, pricing, and future projections to make informed investment decisions."</p>
+            </div>
+            <div class="box">
+                <img src="../img/a-businessman-offers-a-loan-to-buy-a-house-grants-and-financial-assistance-to-rebuild-and-buy-a-home-bank-approval-of-a-mortgage-invest-in-real-estate-property-appraisal-low-interest-rate-photo.jpg">
+                <h3>Mortgage Asistance</h3>
+                <p>"Navigating the mortgage process can be complex. Our dedicated team is here to assist you in finding the best mortgage options, ensuring a smooth and stress-free home buying experience."</p>
+            </div>
+            <div class="box">
+                <img src="../img/Best-2022-Property-Management-Companies.jpg">
+                <h3>Property Management Services</h3>
+                <p>"Maximize the returns on your investment property with our professional property management services. From tenant screening to maintenance, we handle it all, so you can focus on what matters most."</p>
+            </div>
+            <div class="box">
+                <img src="../img/image_4125-800-419-p-C-60.jpg">
+                <h3>Investment Opportunities</h3>
+                <p>"Explore lucrative real estate investment opportunities with our carefully curated portfolio. Whether you're interested in residential developments or commercial ventures, we have options to suit your investment goals."</p>
+            </div>
+            <div class="box">
+                <img src="../img/how-lawyers-can-assist-you-in-resolving-property-disputes.jpg">
+                <h3>Legal Support</h3>
+                <p>"Navigating the legal aspects of real estate transactions can be challenging. Our team of legal experts is here to provide guidance and support, ensuring a seamless and legally sound process."</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

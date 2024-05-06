@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+</head>
+<body>
+    <section id="menu">
+        <div class="logo">
+            <img src="../img/360_F_413491342_xF35oWX2LP6DKVj7M253ZMhNO0lTpikd.jpg" alt="">
+            <h2>Bla Bla</h2>
+        </div>
+        <div class="items">
+            <li><i class="fa fa-pie-chart" aria-hidden="true"></i><a href="adminmainpage.html">Sales DashBoard</a></li>
+            <li><i class="fa fa-user" aria-hidden="true"></i><a href="agentlist.html">Agent List</a></li>
+            <li><i class="fa fa-user" aria-hidden="true"></i><a href="customerlist.html">Customer List</a></li>
+            <li><i class="fa fa-map-marker" aria-hidden="true"></i><a href="marketplace.html">Market Place</a></li>
+            <!-- <li><i class="fa fa-info" aria-hidden="true"></i><a href="salespage.html">Sales Report</a></li> -->
+        </div>
+    </section>
+
+    <section id="interface">
+            <div class="navigation">
+                <div class="n1">
+                    <div>
+                        <a href="/adminmainpage.html" class="fa fa-bars"></a>
+                    </div>
+                    <div class="search">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <input type="text" placeholder="search">
+                    </div>
+                </div>
+                <div class="profile">
+                    <a href="adminlogin.html" id="logoutBtn"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                    <i class="fa fa-bell-o" aria-hidden="true"></i>
+                    <img src="../img/Agent_J_MIB11.jpg" alt="">
+                </div>
+            </div>
+
+            <h3 class="i-name">Sales DashBoard</h3>
+            <div class="value">
+                <div class="val-box">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                    <div>
+                        <h3>50</h3>
+                        <span>Users</span>
+                    </div>
+                </div>
+                <div class="val-box">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                    <div>
+                        <h3>40</h3>
+                        <span>Agent</span>
+                    </div>
+                </div>
+                <div class="val-box">
+                    <i class="fa fa-usd" aria-hidden="true"></i>
+                    <div>
+                        <h3>901,324</h3>
+                        <span>Profit This Month</span>
+                    </div>
+                </div>
+            </div>
+            <div class="charts">
+
+                <div class="chart-card" style="margin-top: 50px;">
+                    <p class="chart-title">Sales Summary 2023</p>
+                    <div id="bar-chart">
+                    </div>
+                </div>
+
+                <div class="chart-card"  style="margin-top: 50px;">
+                    <p class="chart-title">Sales Summary 23&24</p>
+                    <div id="area-chart">
+                    </div>
+                </div>
+
+            </div> 
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+
+        <script>
+            //sidebar toggle
+
+            var sidebarOpen = false;
+            var sidebar = document.getElementById("sidebar");
+
+            function openSidebar(){
+                if(!sidebarOpen){
+                    sidebar.classList.add("sidebar-responsive");
+                    sidebarOpen = true;
+
+                }
+            }
+
+            function closeSidebar(){
+                if(sidebarOpen){
+                    sidebar.classList.remove("sidebar-responsive");
+                    sidebarOpen = false;
+                }
+            }
+
+            //BARCHARTS
+
+            var barChartOptions = {
+                series: [{
+                data: [3,2,1,4,2,5,3]
+                }],
+                chart: {
+                    type: 'bar',
+                    height: 350,
+                    toolbar:{
+                        show: false
+                    },
+                },
+
+                colors:[
+                    "#246dec",
+                    "#cc3c43",
+                    "#367952",
+                    "#f5b74f",
+                    "#cc3c43",
+                    "#367952"
+                ],
+
+                plotOptions: {
+                bar: {
+                    distributed: true,
+                    borderRadius: 4,
+                    horizontal: false,
+                    columnWidth:'40%',
+                }
+                },
+
+                dataLabels: {
+                enabled: false
+                },
+
+                legend:{
+                    show:false,
+                },
+
+                xaxis: {
+                    categories: ['Jun','July', 'August', 'September', 'October', 'Novermber', 'December'],
+                },
+
+                yaxis: {
+                    series:[{
+                        text: "Num of Customer" ,
+                        data: [1,2,3,4,50] 
+                    }]
+
+                }
+            };
+
+            var barChart = new ApexCharts(document.querySelector("#bar-chart"), barChartOptions);
+            barChart.render();
+
+            //AREACHART
+
+            var areaChartoptions = {
+                series: [{
+                    name: 'Purchase Order',
+                    data: [1,2,3,4,5]
+                }, 
+                {
+                    name: 'Sales Order',
+                    data: [6,7,8,9,10]
+                }],
+                chart: {
+                    height: 350,
+                    type: 'area',
+                    toolbar: {
+                        show: false,
+                    },
+                },
+
+                colors:[
+                    "#4f35a1",
+                    "#246dec",
+                ],
+
+                dataLabels:{
+                    enabled: false,
+                },
+
+                stroke: {
+                    curve: 'smooth'
+                },
+               
+                labels: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+                markers: {
+                    size: 0
+                },
+                yaxis: [
+                    {
+                        title: {
+                        text: 'Purchase Order',
+                        },
+                    },
+                    {
+                        opposite: true,
+                        title: {
+                        text: 'Sales Order',
+                        },
+                    },
+                ],
+                tooltip: {
+                    shared: true,
+                    intersect: false,
+                }
+            };
+
+            var areaChart = new ApexCharts(document.querySelector("#area-chart"), areaChartoptions);
+           areaChart.render();
+
+
+        </script>
+</body>
+</html>

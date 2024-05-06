@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/test.css">
+    <style>
+    
+    </style>
+</head>
+<body>
+    <section id="menu">
+        <div class="logo">
+            <img src="../img/360_F_413491342_xF35oWX2LP6DKVj7M253ZMhNO0lTpikd.jpg" alt="">
+            <h2>Bla Bla</h2>
+        </div>
+        <div class="items">
+            <li><i class="fa fa-pie-chart" aria-hidden="true"></i><a href="adminmainpage.html">Sales DashBoard</a></li>
+            <li><i class="fa fa-user" aria-hidden="true"></i><a href="agentlist.html">Agent List</a></li>
+            <li><i class="fa fa-user" aria-hidden="true"></i><a href="customerlist.html">Customer List</a></li>
+            <li><i class="fa fa-map-marker" aria-hidden="true"></i><a href="marketplace.html">Market Place</a></li>
+            <!-- <li><i class="fa fa-info" aria-hidden="true"></i><a href="salespage.html">Sales Report</a></li> -->
+        </div>
+    </section>
+
+    <section id="interface">
+            <div class="navigation">
+                <div class="n1">
+                    <div>
+                        <a href="/adminmainpage.html" class="fa fa-bars"></a>
+                    </div>
+                    <div class="search">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <input type="text" placeholder="search">
+                    </div>
+                </div>
+                <div class="profile">
+                    <a href="adminlogin.html" id="logoutBtn"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                    <i class="fa fa-bell-o" aria-hidden="true"></i>
+                    <img src="../img/Agent_J_MIB11.jpg" alt="">
+                </div>
+            </div>
+    </section>
+    <section>
+        <h3 class="i-name">Market Place</h3>
+        <div  id="row1" class="main">
+
+            <a href="">
+                <div class="image">
+                    <img src="../img/The-Arc-Cyberjaya-Sepang-Malaysia (5).jpg">
+                </div>
+            </a>
+            
+            
+            <div  class="house-detail">
+                    <div class="agent-info">
+                        <img class="agent-detail" src="../img/APHO.133819404.V120B.jpg">
+                        <div class="agent-detail">
+                            <p>Johnny Leong</p>
+                            <p><a href="https://web.whatsapp.com/">Contact Agent</a></p>
+                        </div>
+                    </div>
+                    <div class="address">
+                        <h1 style="margin: 10px 0;">The Arc @ Cyberjaya </h1>
+                        <h3 style="margin-bottom: 10px; display: inline-block;">RM 1,700 / month</h3>
+                        <span class="type">#rent</span>
+                    </div>
+
+                    <div class="hi">
+                        <div class="icon">
+                            <div class="column-icon">
+                                <img src="../img/bed.png">
+                                <p class="icon-name">3 Bed</p>
+                            </div>
+                
+                            <div class="column-icon" >
+                                <img src="../img/bathroom.png">
+                                <p class="icon-name">2 Bath</p>
+                            </div>
+                
+                            <div class="column-icon">
+                                <img src="../img/plans.png">
+                                <p class="icon-name">919 Sqft</p>
+                            </div>
+                
+                            <div class="column-icon" style="margin-right: 0px;">
+                                <img src="../img/chandelier.png">
+                                <p class="icon-name">Fully Furnished</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="delete">
+                <div><i style="font-size: 20px;" class="fa fa-trash" aria-hidden="true" onclick="delelement(1)"></i></div>
+            </div>
+        </div>
+        <div  id="row2" class="main">
+
+            <a href="">
+                <div class="image">
+                    <img src="../img/Amelia-Type-I-Sejati-Residences-Sepang-Malaysia (18).jpg">
+                </div>
+            </a>
+            
+            
+            <div  class="house-detail">
+                    <div class="agent-info">
+                        <img class="agent-detail" src="../img/APHO.116260874.V120B.jpg">
+                        <div class="agent-detail">
+                            <p>Ikmal Hakim</p>
+                            <p><a href="https://web.whatsapp.com/">Contact Agent</a></p>
+                        </div>
+                    </div>
+                    <div class="address">
+                        <h1 style="margin: 10px 0;">Amelia (Type I) @ Sejati Residences</h1>
+                        <h3 style="margin-bottom: 10px; display: inline-block;">RM 2,850,000</h3>
+                        <span class="type">#sell</span>
+                    </div>
+
+                    <div class="hi">
+                        <div class="icon">
+                            <div class="column-icon">
+                                <img src="../img/bed.png">
+                                <p class="icon-name">5 Bed</p>
+                            </div>
+                
+                            <div class="column-icon" >
+                                <img src="../img/bathroom.png">
+                                <p class="icon-name">5 Bath</p>
+                            </div>
+                
+                            <div class="column-icon">
+                                <img src="../img/plans.png">
+                                <p class="icon-name">4939 Sqft</p>
+                            </div>
+                
+                            <div class="column-icon" style="margin-right: 0px;">
+                                <img src="../img/chandelier.png">
+                                <p class="icon-name">Fully Furnished</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="delete">
+                <div><i style="font-size: 20px;" class="fa fa-trash" aria-hidden="true" onclick="delelement(2)"></i></div>
+            </div>
+        </div>
+        <div  id="row3" class="main">
+
+            <a href="">
+                <div class="image">
+                    <img src="../img/Ampang-Hilir-Kuala-Lumpur-Ampang-Hilir-Malaysia.jpg">
+                </div>
+            </a>
+            <div  class="house-detail">
+                    <div class="agent-info">
+                        <img class="agent-detail" src="../img/APHO.124106789.V120B.jpg">
+                        <div class="agent-detail">
+                            <p>Rosli Hamid</p>
+                            <p><a href="https://web.whatsapp.com/">Contact Agent</a></p>
+                        </div>
+                    </div>
+                    <div class="address">
+                        <h1 style="margin: 10px 0;">Ampang, Ampang Hilir, Kuala Lumpur. </h1>
+                        <h3 style="margin-bottom: 10px; display: inline-block;">RM 21,000 / month</h3>
+                        <span class="type">#rent</span>
+                    </div>
+
+                    <div class="hi">
+                        <div class="icon">
+                            <div class="column-icon">
+                                <img src="../img/bed.png">
+                                <p class="icon-name">7 Bed</p>
+                            </div>
+                
+                            <div class="column-icon" >
+                                <img src="../img/bathroom.png">
+                                <p class="icon-name">9 Bath</p>
+                            </div>
+                
+                            <div class="column-icon">
+                                <img src="../img/plans.png">
+                                <p class="icon-name">26000 Sqft</p>
+                            </div>
+                
+                            <div class="column-icon" style="margin-right: 0px;">
+                                <img src="../img/chandelier.png">
+                                <p class="icon-name">Fully Furnished</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="delete">
+                <div><i style="font-size: 20px;" class="fa fa-trash" aria-hidden="true" onclick="delelement(3)"></i></div>
+            </div>
+        </div>
+        <div  id="row4" class="main">
+            <a href="imageDetails.html">
+                <div class="image">
+                    <img src="../img/Terrace-house-at-Cheras-Cheras-Malaysia.jpg">
+                </div>
+            </a>
+            <div  class="house-detail">
+                    <div class="agent-info">
+                        <img class="agent-detail" src="../img/APHO.140830242.V120B.jpg">
+                        <div class="agent-detail">
+                            <p>Leow Yuh Biau</p>
+                            <p><a href="https://web.whatsapp.com/">Contact Agent</a></p>
+                        </div>
+                    </div>
+                    <div class="address">
+                        <h1 style="margin: 10px 0;">Terrace house at Cheras alam damai</h1>
+                        <h3 style="margin-bottom: 10px; display: inline-block;">RM 2,700 / month</h3>
+                        <span class="type">#rent</span>
+                    </div>
+
+                    <div class="hi">
+                        <div class="icon">
+                            <div class="column-icon">
+                                <img src="../img/bed.png">
+                                <p class="icon-name">4 Bed</p>
+                            </div>
+                
+                            <div class="column-icon" >
+                                <img src="../img/bathroom.png">
+                                <p class="icon-name">3 Bath</p>
+                            </div>
+                
+                            <div class="column-icon">
+                                <img src="../img/plans.png">
+                                <p class="icon-name">1980 Sqft</p>
+                            </div>
+                
+                            <div class="column-icon" style="margin-right: 0px;">
+                                <img src="../img/chandelier.png">
+                                <p class="icon-name">Fully Furnished</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="delete">
+                <div><i style="font-size: 20px;" class="fa fa-trash" aria-hidden="true" onclick="delelement(4)"></i></div>
+            </div>
+        </div>
+        <div  id="row5" class="main">
+
+            <a href="imageDetails.html">
+                <div class="image">
+                    <img src="../img/Sky-Suites-KLCC-KL-City-Malaysia.jpg">
+                </div>
+            </a>
+           
+            
+            <div  class="house-detail">
+                    <div class="agent-info">
+                        <img class="agent-detail" src="../img/APHO.150336651.V120B.jpg">
+                        <div class="agent-detail">
+                            <p>Shirley Kok</p>
+                            <p><a href="https://web.whatsapp.com/">Contact Agent</a></p>
+                        </div>
+                    </div>
+                    <div class="address">
+                        <h1 style="margin: 10px 0;">Sky Suites @ KLCC</h1>
+                        <h3 style="margin-bottom: 10px; display: inline-block;">RM 5,800 / month</h3>
+                        <span class="type">#rent</span>
+                    </div>
+
+                    <div class="hi">
+                        <div class="icon">
+                            <div class="column-icon">
+                                <img src="../img/bed.png">
+                                <p class="icon-name">3 Bed</p>
+                            </div>
+                
+                            <div class="column-icon" >
+                                <img src="../img/bathroom.png">
+                                <p class="icon-name">2 Bath</p>
+                            </div>
+                
+                            <div class="column-icon">
+                                <img src="../img/plans.png">
+                                <p class="icon-name">795 Sqft</p>
+                            </div>
+                
+                            <div class="column-icon" style="margin-right: 0px;">
+                                <img src="../img/chandelier.png">
+                                <p class="icon-name">Fully Furnished</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="delete">
+                <div><i style="font-size: 20px;" class="fa fa-trash" aria-hidden="true" onclick="delelement(5)"></i></div>
+            </div>
+        </div>
+        <div  id="row6" class="main">
+
+            <a href="imageDetails.html">
+                <div class="image">
+                    <img src="../img/Amelia-Type-I-Sejati-Residences-Sepang-Malaysia (1).jpg">
+                </div>
+            </a>
+            
+            
+            <div  class="house-detail">
+                    <div class="agent-info">
+                        <img class="agent-detail" src="../img/APHO.161300944.V120B.jpg">
+                        <div class="agent-detail">
+                            <p>Sarah F Properties</p>
+                            <p><a href="https://web.whatsapp.com/">Contact Agent</a></p>
+                        </div>
+                    </div>
+                    <div class="address">
+                        <h1 style="margin: 10px 0;">Amelia (Type I) @ Sejati Residences</h1>
+                        <h3 style="margin-bottom: 10px; display: inline-block;">RM 16,800 / month</h3>
+                        <span class="type">#rent</span>
+                    </div>
+
+                    <div class="hi">
+                        <div class="icon">
+                            <div class="column-icon">
+                                <img src="../img/bed.png">
+                                <p class="icon-name">5 Bed</p>
+                            </div>
+                
+                            <div class="column-icon" >
+                                <img src="../img/bathroom.png">
+                                <p class="icon-name">5 Bath</p>
+                            </div>
+                
+                            <div class="column-icon">
+                                <img src="../img/plans.png">
+                                <p class="icon-name">4939 Sqft</p>
+                            </div>
+                
+                            <div class="column-icon" style="margin-right: 0px;">
+                                <img src="../img/chandelier.png">
+                                <p class="icon-name">Fully Furnished</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="delete">
+                <div><i style="font-size: 20px;" class="fa fa-trash" aria-hidden="true" onclick="delelement(6)"></i></div>
+            </div>
+        </div>
+        
+    </section>
+    <script>
+        var rownum;
+            
+            function delelement(rownum){
+                if(rownum==1)
+                {
+                    const element= document.getElementById("row1");
+                    element.remove();
+                }else if(rownum==2){
+                    const element= document.getElementById("row2");
+                    element.remove();
+                }else if(rownum==3){
+                    const element= document.getElementById("row3");
+                    element.remove();
+                }
+                else if(rownum==4){
+                    const element= document.getElementById("row4");
+                    element.remove();
+                }
+                else if(rownum==5){
+                    const element= document.getElementById("row5");
+                    element.remove();
+                }
+                else if(rownum==6){
+                    const element= document.getElementById("row6");
+                    element.remove();
+                }
+                
+                
+            }
+
+    </script>
+</body>
+</html
